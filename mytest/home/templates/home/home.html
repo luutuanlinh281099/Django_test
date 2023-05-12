@@ -16,7 +16,14 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <h3>Linh ngoan hien</h3>
+        <h3>{{ name }} - {{ age }}</h3>
+        <p> Tên tôi là : {{ name }} </p>
+        <p> Tuổi là : {{ age }} </p>
+        <ul>
+            {% for item in asset%}
+            <li> {{ item }} </li>
+            {% endfor %}
+        </ul>
         <script src="" async defer></script>
     </body>
 </html>
