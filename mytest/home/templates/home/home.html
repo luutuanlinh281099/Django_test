@@ -20,9 +20,13 @@
         <p> Tên tôi là : {{ name }} </p>
         <p> Tuổi là : {{ age }} </p>
         <ul>
-            {% for item in asset%}
-            <li> {{ item }} </li>
-            {% endfor %}
+            {% if questions %}
+                {% for item in questions%}
+                    <li> {{ item.question_text }} </li>
+                {% endfor %}
+            {% else %}
+                <h3> linh ngu </h3>
+            {% endif %}
         </ul>
         <script src="" async defer></script>
     </body>

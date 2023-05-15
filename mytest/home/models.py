@@ -1,12 +1,11 @@
 from django.db import models
 
 # Create your models here.
-class Question (models.Model):
-    question_id = models.IntegerField()
+class Questions (models.Model):
     question_text = models.CharField(max_length=200)
-    time = models.DateTimeField
+    time_push = models.DateTimeField()
 
-class Choice (models.Model):
-    question_id = models.ForeignKey(Question, on_delete=models.CASCADE)
+class Choices (models.Model):
+    question = models.ForeignKey(Questions, on_delete=models.CASCADE)
     choice_text = models.CharField(max_length=300)
     vote = models.IntegerField(default=0)
